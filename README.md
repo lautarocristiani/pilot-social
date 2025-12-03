@@ -45,21 +45,25 @@ Este stack fue seleccionado para cubrir los **Criterios de Evaluación** (UI, Li
 
 ## 📂 Estructura del Proyecto
 
-La estructura sigue una organización modular:
+El proyecto utiliza una arquitectura basada en **Features** (Vertical Slicing) para mejorar la escalabilidad y el mantenimiento:
 
 ```text
 src/
-├── api/           # Capa de servicio (Axios + Endpoints)
-├── components/    # Componentes UI reutilizables (basados en MUI)
-├── hooks/         # Custom Hooks (encapsulando lógica de React Query)
-├── pages/         # Vistas principales (Home y PostDetail)
-├── types/         # Interfaces TypeScript (User, Post, Comment)
-└── utils/         # Validaciones y helpers
+├── api/          # Configuración de cliente HTTP (Axios)
+├── components/   # Componentes UI reutilizables (UI Kit & Layouts)
+├── features/     # Módulos funcionales encapsulados
+│   ├── feed/     # Lógica, componentes y hooks del Feed principal
+│   └── post/     # Lógica, componentes y hooks del Detalle de Post
+├── pages/        # Composición de vistas (Entry points de rutas)
+├── routes/       # Definición de rutas y navegación
+├── theme/        # Configuración del sistema de diseño (MUI Theme)
+└── utils/        # Funciones auxiliares y constantes globales
+```
 
-## ✅ Cumplimiento de Requerimientos
+## ✅ Cumplimiento de Requerimientos (En Progreso)
 
-- [x] **Implementación en ReactJS** (Vite + TS).
-- [x] **Componentes Funcionales** (Hooks).
-- [x] **Al menos 2 páginas** (Feed y Detalle).
-- [x] **Manejo de Errores:** Implementado en las peticiones de API y validaciones de formulario.
-- [x] **Tipado:** TypeScript estricto en toda la aplicación.
+- [ ] **Implementación en ReactJS** (Vite + TS).
+- [ ] **Componentes Funcionales** (Hooks).
+- [ ] **Al menos 2 páginas** (Feed y Detalle).
+- [ ] **Manejo de Errores:** Implementado en las peticiones de API y validaciones de formulario.
+- [ ] **Tipado:** TypeScript estricto en toda la aplicación.
