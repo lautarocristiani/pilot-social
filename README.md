@@ -1,29 +1,49 @@
 # PilotSocial - PilotX Frontend Challenge
 
-Solución técnica para el desafío Frontend de PilotX. Una aplicación desarrollada con **React y TypeScript** que gestiona la lectura de publicaciones y la interacción mediante comentarios, priorizando una arquitectura escalable y una UX fluida.
+Solución técnica para el desafío Frontend de PilotX. Una aplicación desarrollada con **React y TypeScript** centrada en la lectura fluida de contenido y la interacción mediante comentarios, implementando una arquitectura escalable y patrones de UX modernos.
 
 ## 📋 Descripción del Proyecto
 
-La aplicación cumple con los requerimientos de visualizar un feed de noticias y permitir la interacción detallada en cada publicación. Se ha diseñado pensando en la mantenibilidad y la robustez del código.
+La aplicación permite a los usuarios navegar un feed de noticias, filtrar contenido de manera dinámica e interactuar en las discusiones. Se ha puesto especial énfasis en la **persistencia de datos del lado del cliente** para ofrecer una experiencia realista sobre una API de prueba.
 
-### Funcionalidades
-1.  **Feed de Publicaciones:** Vista principal con listado de posts obtenidos de la API.
-2.  **Detalle de Publicación:** Vista dinámica (`/post/:id`) que muestra el contenido completo.
-3.  **Sistema de Comentarios:**
-    * Lectura de comentarios existentes.
-    * **Creación de nuevos comentarios** con validación de formularios en tiempo real.
+### Funcionalidades Clave
+1.  **Feed Inteligente:** Visualización de posts con filtros por **Autor** y **Búsqueda por texto** en tiempo real.
+2.  **Sistema de Comentarios Híbrido:**
+    * Consumo de comentarios existentes desde la API.
+    * **Persistencia Local:** Los nuevos comentarios creados por el usuario se guardan en el navegador (`LocalStorage`) y se fusionan con los datos del servidor, evitando que desaparezcan al recargar.
+3.  **Experiencia de Usuario (UX):**
+    * Feedback visual inmediato (Loading Skeletons, Validaciones).
+    * **Dark Mode / Light Mode** con persistencia de preferencia.
+    * Diseño responsivo basado en Material Design.
 
-## 🚀 Stack Tecnológico y Decisiones Técnicas
+## 🚀 Stack Tecnológico
 
-Este stack fue seleccionado para cubrir los **Criterios de Evaluación** (UI, Librerías, Estructura, Hooks y Tipado):
+Selección de herramientas basada en robustez, mantenibilidad y los criterios de evaluación:
 
-* **Core:** `React 18` + `TypeScript` + `Vite` (Rendimiento y seguridad de tipos).
-* **UI & Diseño:** `Material UI (MUI v5)`. Se eligió por su robustez para sistemas de diseño empresariales y rapidez de implementación.
-* **Gestión de Estado Servidor:** `TanStack Query (v5)`.
-    * *¿Por qué?* Maneja el **caching**, estados de carga (loading) y errores de forma nativa, superior al `useEffect` tradicional para llamadas asíncronas.
-* **Routing:** `React Router DOM` para navegación SPA.
-* **Formularios:** `React Hook Form` + `Zod`.
-    * *¿Por qué?* Ofrece el mejor rendimiento de renderizado y una validación de esquemas estricta y declarativa.
+* **Core:** `React 18` + `TypeScript` + `Vite`.
+* **UI System:** `Material UI (MUI v5)` + `Framer Motion` (animaciones).
+* **Estado & Datos:**
+    * `TanStack Query (v5)`: Para gestión eficiente de datos del servidor (Caching, Loading, Error).
+    * `Zustand` + `Persist Middleware`: Para gestión de estado local (Tema y Comentarios nuevos).
+* **Routing:** `React Router DOM`.
+* **Formularios:** `React Hook Form` + `Zod` (Validación de esquemas).
+
+## 📂 Estructura del Proyecto
+
+El proyecto utiliza una arquitectura basada en **Features** (Vertical Slicing) para mejorar la escalabilidad:
+
+```text
+src/
+├── api/          # Configuración de cliente HTTP (Axios)
+├── components/   # Componentes UI reutilizables (UI Kit & Layouts)
+├── features/     # Módulos funcionales encapsulados
+│   ├── feed/     # Lógica, componentes y hooks del Feed principal
+│   └── post/     # Lógica, componentes y hooks del Detalle y Comentarios
+├── pages/        # Composición de vistas (Entry points de rutas)
+├── routes/       # Definición de rutas y navegación
+├── theme/        # Configuración del sistema de diseño (MUI Theme)
+└── utils/        # Funciones auxiliares y constantes
+```
 
 ## 🛠️ Instalación y Ejecución
 
@@ -42,23 +62,6 @@ Este stack fue seleccionado para cubrir los **Criterios de Evaluación** (UI, Li
     ```bash
     npm run dev
     ```
-
-## 📂 Estructura del Proyecto
-
-El proyecto utiliza una arquitectura basada en **Features** (Vertical Slicing) para mejorar la escalabilidad y el mantenimiento:
-
-```text
-src/
-├── api/          # Configuración de cliente HTTP (Axios)
-├── components/   # Componentes UI reutilizables (UI Kit & Layouts)
-├── features/     # Módulos funcionales encapsulados
-│   ├── feed/     # Lógica, componentes y hooks del Feed principal
-│   └── post/     # Lógica, componentes y hooks del Detalle de Post
-├── pages/        # Composición de vistas (Entry points de rutas)
-├── routes/       # Definición de rutas y navegación
-├── theme/        # Configuración del sistema de diseño (MUI Theme)
-└── utils/        # Funciones auxiliares y constantes globales
-```
 
 ## ✅ Cumplimiento de Requerimientos (En Progreso)
 
