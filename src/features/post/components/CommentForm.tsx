@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Box, TextField, Button, Typography, Alert } from '@mui/material';
+import { Box, TextField, Button, Typography } from '@mui/material';
 import { Send } from '@mui/icons-material';
 import { useCommentsStore } from '../../../store/comments.store';
 
