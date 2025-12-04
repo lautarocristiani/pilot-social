@@ -6,6 +6,12 @@ Solución técnica para el desafío Frontend de PilotX. Una aplicación desarrol
 
 La aplicación permite a los usuarios navegar un feed de noticias, filtrar contenido de manera dinámica e interactuar en las discusiones. Se ha puesto especial énfasis en la **persistencia de datos del lado del cliente** para ofrecer una experiencia realista sobre una API de prueba.
 
+### 📸 Galería
+<div align="center">
+  <img src="./docs/feed-view.png" width="45%" alt="Feed de Noticias" title="Feed con Filtros y Buscador" style="margin-right: 10px;" />
+  <img src="./docs/post-detail.png" width="45%" alt="Detalle del Post" title="Interacción, Validación y Edición" />
+</div>
+
 ### Funcionalidades Clave
 1.  **Feed Inteligente:** Visualización de posts con filtros por **Autor** y **Búsqueda por texto** en tiempo real.
 2.  **Sistema de Comentarios Híbrido:**
@@ -20,13 +26,17 @@ La aplicación permite a los usuarios navegar un feed de noticias, filtrar conte
 
 Selección de herramientas basada en robustez, mantenibilidad y los criterios de evaluación:
 
-* **Core:** `React 18` + `TypeScript` + `Vite`.
-* **UI System:** `Material UI (MUI v5)` + `Framer Motion` (animaciones).
-* **Estado & Datos:**
-    * `TanStack Query (v5)`: Para gestión eficiente de datos del servidor (Caching, Loading, Error).
-    * `Zustand` + `Persist Middleware`: Para gestión de estado local (Tema y Comentarios nuevos).
-* **Routing:** `React Router DOM`.
-* **Formularios:** `React Hook Form` + `Zod` (Validación de esquemas).
+### Core
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+
+### UI & UX
+![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+
+### Estado & Datos
+![TanStack Query](https://img.shields.io/badge/-TanStack%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white) ![Zustand](https://img.shields.io/badge/Zustand-443E38?style=for-the-badge&logo=react&logoColor=white)
+
+### Routing & Formularios
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white) ![Zod](https://img.shields.io/badge/Zod-3068b7?style=for-the-badge&logo=zod&logoColor=white)
 
 ## 📂 Estructura del Proyecto
 
@@ -65,8 +75,8 @@ src/
 
 ## ✅ Cumplimiento de Requerimientos (En Progreso)
 
-- [ ] **Implementación en ReactJS** (Vite + TS).
-- [ ] **Componentes Funcionales** (Hooks).
-- [ ] **Al menos 2 páginas** (Feed y Detalle).
-- [ ] **Manejo de Errores:** Implementado en las peticiones de API y validaciones de formulario.
-- [ ] **Tipado:** TypeScript estricto en toda la aplicación.
+- [x] **Implementación en ReactJS** (Vite + TS).
+- [x] **Componentes Funcionales** (Hooks).
+- [x] **Al menos 2 páginas** (Feed y Detalle).
+- [x] **Manejo de Errores:** Implementado en las peticiones de API y validaciones de formulario.
+- [x] **Tipado:** TypeScript estricto en toda la aplicación.
