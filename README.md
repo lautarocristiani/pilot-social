@@ -61,6 +61,13 @@ src/
 └── utils/        # Funciones auxiliares y constantes
 ```
 
+## 📖 Metodología y Documentación
+
+El desarrollo fue guiado por una fase inicial de análisis y diseño para asegurar el cumplimiento de los requerimientos desde la perspectiva del usuario.
+
+* [📄 User Stories](./docs/USER_STORIES.md): Definición de los requerimientos funcionales y valor para el usuario.
+* [📄 BDD Scenarios](./docs/SCENARIOS.md): Criterios de aceptación y casos de prueba en formato Gherkin (Given/When/Then).
+
 ## 🛠️ Instalación y Ejecución
 
 1.  **Clonar el repositorio**
