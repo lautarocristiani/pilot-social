@@ -79,7 +79,7 @@ src/
     npm run dev
     ```
 
-## ✅ Cumplimiento de Requerimientos (En Progreso)
+## ✅ Cumplimiento de Requerimientos
 
 - [x] **Implementación en ReactJS** (Vite + TS).
 - [x] **Componentes Funcionales** (Hooks).
