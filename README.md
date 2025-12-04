@@ -3,7 +3,9 @@
 Solución técnica para el desafío Frontend de PilotX. Una aplicación desarrollada con **React y TypeScript** centrada en la lectura fluida de contenido y la interacción mediante comentarios, implementando una arquitectura escalable y patrones de UX modernos.
 
 <div align="center">
+
 [![Demo Online](https://img.shields.io/badge/DEMO_ONLINE-VERCEL-success?style=for-the-badge&logo=vercel&logoColor=white)](https://pilot-social.vercel.app/)
+
 </div>
 
 ## 📋 Descripción del Proyecto
